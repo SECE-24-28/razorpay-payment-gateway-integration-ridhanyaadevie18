@@ -1,9 +1,4 @@
 import Razorpay from "razorpay";
-import dotenv from 'dotenv';
-dotenv.config();
-
-
-console.log("key:",process.env.KEY_ID);
 // create the Razorpay instance 
 const razorpay = new Razorpay({
     key_id: process.env.KEY_ID,

@@ -9,8 +9,7 @@ export default function Home(){
             method: "POST"
         });
 
-        const order = await orderResponse.json();
-        console.log("order:", order);
+        const { order } = await orderResponse.json();
 
         // you need to create options
         const options = {
@@ -41,8 +40,7 @@ export default function Home(){
     }
     return (
         <div>
-            <Script src="https://checkout.razorpay.com/v1/magic-checkout.js"
-            />
+            <Script src="https://checkout.razorpay.com/v1/checkout.js" />
             <h1>Payment Page</h1>
             <button onClick={payNow}>Pay Rs500</button>
         </div>
